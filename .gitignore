@@ -1,7 +1,9 @@
 # datasets
 data/
 datasets/
-*.csv
+*.txt
+*Dataset.csv
+.DS_Store
 *.tsv
 *.parquet
 *.zip
@@ -11,3 +13,4 @@ datasets/
 *.h5
 *.pkl
 *.joblib
+venv

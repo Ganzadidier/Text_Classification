@@ -1,0 +1,13 @@
+# datasets
+data/
+datasets/
+*.csv
+*.tsv
+*.parquet
+*.zip
+*.7z
+*.tar
+*.gz
+*.h5
+*.pkl
+*.joblib

@@ -18,8 +18,6 @@ The goal is to evaluate how representation choice affects performance under the 
 ### Main Evaluation Metric
 - **Macro-F1** (primary, because classes are imbalanced)
 
----
-
 ## Repository Structure
 ```text
 ├── data/

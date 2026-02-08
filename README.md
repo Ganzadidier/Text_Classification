@@ -1,23 +1,23 @@
 # Comparative Analysis of Text Classification with Multiple Embeddings (Hate Speech Detection)
 
-## 📌 Project Overview
+## Project Overview
 This project compares multiple embedding strategies and neural network architectures for binary hate speech classification. The goal is to evaluate how representation choice (Embeddings) and model complexity (SimpleRNN vs. GRU vs. LSTM) affect performance under a **shared preprocessing strategy**.
 
 
 
-### 👥 Team Contributions & Architecture
+###  Team Contributions & Architecture
 | Architecture | Lead Member | Key Focus |
 | :--- | :--- | :--- |
 | **SimpleRNN** | **AgbajeCity** | Investigating gradient stability across embeddings (Skip-gram vs CBOW). |
 | **LSTM** | **Izabayo7** | Sequence modelling with long-term context retention. |
 | **GRU / Linear** | **Ganzadidier** | Baseline comparison (LinearSVC) and efficient gating (GRU). |
 
-### 🧠 Embeddings Compared
+###  Embeddings Compared
 1.  **TF-IDF** (Baseline - sparse representation)
 2.  **Word2Vec Skip-gram** (Context-focused dense vector)
 3.  **Word2Vec CBOW** (Target-focused dense vector)
 
-### 🚀 Model Pipelines Evaluated
+###  Model Pipelines Evaluated
 - **Baselines:** TF-IDF + Logistic Regression / LinearSVC
 - **Deep Learning:**
     - Word2Vec + **SimpleRNN** (Recurrent Neural Network)
@@ -26,7 +26,7 @@ This project compares multiple embedding strategies and neural network architect
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 ```text
 ├── data/
 │   ├── HateSpeechDataset.csv              # Raw Data
@@ -45,7 +45,7 @@ This project compares multiple embedding strategies and neural network architect
 
 ---
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ### 1. Environment Setup
 
@@ -80,7 +80,7 @@ unzip data/*.zip -d data/
 
 ---
 
-## 🏃‍♂️ How to Run the Project
+##  How to Run the Project
 
 ### Step 1: Preprocessing (Crucial)
 
@@ -99,26 +99,27 @@ Each notebook handles a specific architecture and can be run independently:
 
 ---
 
-## 📊 Key Findings & Results
+##  Key Findings & Results
 
-### 1. SimpleRNN Analysis (AgbajeCity)
 
-* **Best Configuration:** SimpleRNN + **CBOW** (F1: 0.47)
-* **Critical Insight:** SimpleRNN proved unstable with Skip-gram embeddings due to the **vanishing gradient problem**. It required strict class weighting to prevent the model from predicting only the majority class. **CBOW** provided the necessary stability for convergence, outperforming the standard TF-IDF embedding for this architecture.
-
-### 2. LSTM Analysis (Izabayo7)
+### 1. LSTM Analysis (Izabayo7)
 
 * **Performance:** The LSTM architecture successfully mitigated the gradient issues seen in SimpleRNN.
 * **Strength:** Superior handling of long-range dependencies in tweets compared to the simpler architectures.
 
-### 3. GRU & Baselines (Ganzadidier)
+### 2. GRU & Baselines (Ganzadidier)
 
 * **LinearSVC:** Provided a surprisingly strong baseline, outperforming un-tuned neural networks in terms of training speed and initial accuracy.
 * **GRU:** Offered a balance between the complexity of LSTM and the speed of SimpleRNN.
 
+### 3. SimpleRNN Analysis (AgbajeCity)
+
+* **Best Configuration:** SimpleRNN + **CBOW** (F1: 0.47)
+* **Critical Insight:** SimpleRNN proved unstable with Skip-gram embeddings due to the **vanishing gradient problem**. It required strict class weighting to prevent the model from predicting only the majority class. **CBOW** provided the necessary stability for convergence, outperforming the standard TF-IDF embedding for this architecture.
+
 ---
 
-## 📈 Evaluation Metrics
+## Evaluation Metrics
 
 * **Primary Metric:** **Macro-F1 Score**
 * **Reasoning:** The dataset is heavily imbalanced. Accuracy is a misleading metric (a model could predict 90% accuracy by ignoring all hate speech). Macro-F1 treats both "Hate" and "Not Hate" classes as equally important.

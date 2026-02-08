@@ -21,8 +21,7 @@ The goal is to evaluate how representation choice affects performance under the 
 ---
 
 ## Repository Structure
-
-.
+```text
 ├── data/
 │      # Kaggle download goes here── HateSpeechDataset.csv
 │      └── HateSpeechDataset_preprocessed.csv

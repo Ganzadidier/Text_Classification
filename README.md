@@ -1,12 +1,12 @@
 # Comparative Analysis of Text Classification with Multiple Embeddings (Hate Speech Detection)
 
 ## Project Overview
-This project compares multiple embedding strategies and neural network architectures for binary hate speech classification. The goal is to evaluate how representation choice (Embeddings) and model complexity (SimpleRNN vs. GRU vs. LSTM) affect performance under a **shared preprocessing strategy**.
+This project compares multiple embedding strategies and neural network architectures for binary hate speech classification. The goal is to evaluate how representation choice (Embeddings) and model complexity (SimpleRNN vs. GRU vs. LSTM) affect performance under a shared preprocessing strategy.
 
 
 
 ###  Team Contributions & Architecture
-| Architecture | Lead Member | Key Focus |
+| Architecture | Member | Key Focus |
 | :--- | :--- | :--- |
 | **SimpleRNN** | **AgbajeCity** | Investigating gradient stability across embeddings (Skip-gram vs CBOW). |
 | **LSTM** | **Izabayo7** | Sequence modelling with long-term context retention. |
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 ### 2. Data Acquisition
 
-The project relies on the **Hate Speech Dataset**.
+The project relies on the Hate Speech Dataset.
 
 * **Option A (Kaggle API):**
 ```bash
@@ -115,7 +115,7 @@ Each notebook handles a specific architecture and can be run independently:
 ### 3. SimpleRNN Analysis (AgbajeCity)
 
 * **Best Configuration:** SimpleRNN + **CBOW** (F1: 0.47)
-* **Critical Insight:** SimpleRNN proved unstable with Skip-gram embeddings due to the **vanishing gradient problem**. It required strict class weighting to prevent the model from predicting only the majority class. **CBOW** provided the necessary stability for convergence, outperforming the standard TF-IDF embedding for this architecture.
+* **Critical Insight:** SimpleRNN proved unstable with Skip-gram embeddings due to the vanishing gradient problem. It required strict class weighting to prevent the model from predicting only the majority class. **CBOW** provided the necessary stability for convergence, outperforming the standard TF-IDF embedding for this architecture.
 
 ---
 

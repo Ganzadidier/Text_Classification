@@ -33,6 +33,7 @@ The goal is to evaluate how representation choice affects performance under the 
 ├── requirements.txt
 └── README.md
 
+---
 
 ## Team Objective
 

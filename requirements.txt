@@ -8,3 +8,4 @@ jupyter
 notebook
 tensorflow
 keras
+wordcloud

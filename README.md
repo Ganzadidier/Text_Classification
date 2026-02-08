@@ -1,8 +1,3 @@
-Here is the final, polished version of the `README.md` in pure Markdown.
-
-You can copy this entire block of code and paste it directly into the **Edit** tab of your `README.md` file on GitHub.
-
-```markdown
 # Comparative Analysis of Text Classification with Multiple Embeddings (Hate Speech Detection)
 
 ## 📌 Project Overview

@@ -22,7 +22,6 @@ The goal is to evaluate how representation choice affects performance under the 
 
 ## Repository Structure
 
-```text
 .
 ├── data/
 │      # Kaggle download goes here── HateSpeechDataset.csv
@@ -34,6 +33,7 @@ The goal is to evaluate how representation choice affects performance under the 
 └── README.md
 
 ---
+
 
 ## Team Objective
 

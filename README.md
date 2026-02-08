@@ -125,5 +125,3 @@ We prioritized Macro-F1 Score over Accuracy.
 The Problem: The dataset is heavily imbalanced (mostly "Not Hate"). A model predicting "Not Hate" for every tweet would achieve ~90% accuracy but be useless.
 
 The Solution: Macro-F1 treats both classes equally, penalizing models that ignore the minority class. This gives a true measure of hate speech detection capability.
-
-```

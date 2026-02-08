@@ -204,3 +204,8 @@ EDA figures for report
 Draft report:
 
 reports/Comparative_Embedding_Text_Classification_Report_Draft.docx
+
+## RNN Contribution
+- **Model:** SimpleRNN
+- **Embeddings:** CBOW (Best), Skip-gram, Standard
+- **Key Finding:** SimpleRNN requires class weights to handle imbalance; CBOW provides the best stability.

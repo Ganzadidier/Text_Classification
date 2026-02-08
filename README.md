@@ -141,7 +141,7 @@ B. Improved CPU pipeline (recommended)
 
 Run:
 
-notebooks/HateSpeech_CPU_Improved_Notebook.ipynb
+notebooks/HateSpeech RubricReady_Notebook.ipynb
 
 This notebook includes:
 
@@ -161,7 +161,7 @@ Recommended Run Order
 
 HateSpeech_Preprocessing_Notebook.ipynb
 
-HateSpeech_CPU_Improved_Notebook.ipynb
+HateSpeech RubricReady_Notebook.ipynb
 
 HateSpeech_RubricReady_Notebook.ipynb (for figures/tables/report polish)
 

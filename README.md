@@ -120,10 +120,10 @@ Each notebook handles a specific architecture and can be run independently:
 ---
 
 ## Evaluation Metrics
+We prioritized Macro-F1 Score over Accuracy.
 
-* **Primary Metric:** **Macro-F1 Score**
-* **Reasoning:** The dataset is heavily imbalanced. Accuracy is a misleading metric (a model could predict 90% accuracy by ignoring all hate speech). Macro-F1 treats both "Hate" and "Not Hate" classes as equally important.
+The Problem: The dataset is heavily imbalanced (mostly "Not Hate"). A model predicting "Not Hate" for every tweet would achieve ~90% accuracy but be useless.
 
-```
+The Solution: Macro-F1 treats both classes equally, penalizing models that ignore the minority class. This gives a true measure of hate speech detection capability.
 
 ```
